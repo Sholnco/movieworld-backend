@@ -54,6 +54,13 @@ app.post('/api/test', [
 app.use('/api/auth', authRoutes);
 
 // ======================
+// Root route for Render
+// ======================
+app.get("/", (req, res) => {
+  res.send("🚀 MovieWorld Backend is running!");
+});
+
+// ======================
 // Database & Server
 // ======================
 const PORT = process.env.PORT || 5000;
